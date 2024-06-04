@@ -22,7 +22,7 @@ SRCREV = "fe9a39bee8b5fc05cca48b50a98426942826f5cb"
 
 S = "${WORKDIR}/git"
 
-do_install_append() {
+do_install:append() {
     install -Dm 0644 ${S}/res/org.freedesktop.miracle.conf ${D}${sysconfdir}/dbus-1/system.d/org.freedesktop.miracle.conf
     install -Dm 0755 ${S}/res/kill-wpa.sh ${D}${bindir}/kill-wpa.sh
     install -Dm 0755 ${S}/res/miracle-utils.sh ${D}${bindir}/miracle-utils.sh
