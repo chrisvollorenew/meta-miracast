@@ -35,14 +35,14 @@ do_install:append() {
 
 PACKAGES =+ "${PN}-resources"
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${sysconfdir}/dbus-1/system.d \
 "
-FILES_${PN}-resources = " \
+FILES:${PN}-resources = " \
     ${bindir}/*.sh \
 "
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     bash \
     iproute2 \
     gstreamer1.0-libav \
@@ -52,6 +52,6 @@ RDEPENDS_${PN} += " \
     python3-core \
 "
 
-RDEPENDS_${PN}-resources += " \
+RDEPENDS:${PN}-resources += " \
     bash \
 "

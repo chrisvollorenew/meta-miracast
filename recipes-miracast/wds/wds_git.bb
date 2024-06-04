@@ -26,9 +26,9 @@ do_install:append() {
 }
 
 PACKAGES =+ "${PN}-examples"
-FILES_${PN}-examples += "${bindir}/wds-examples/*"
+FILES:${PN}-examples += "${bindir}/wds-examples/*"
 
-RDEPENDS_${PN} += " \
+RDEPENDS:${PN} += " \
     connman-client \
     wpa-supplicant \
     gstreamer1.0-libav \
