@@ -15,7 +15,7 @@ S = "${WORKDIR}/git"
 
 EXTRA_OECMAKE += "-DCMAKE_SKIP_RPATH=ON"
 
-do_install_append() {
+do_install:append() {
     install -Dm 0755 ${B}/desktop_source/desktop-source-test ${D}${bindir}/wds-examples/desktop-source-test
     install -Dm 0755 ${B}/libwds/rtsp/tests/test-wds ${D}${bindir}/wds-examples/test-wds
     install -Dm 0755 ${B}/mirac_network/gst-test ${D}${bindir}/wds-examples/gst-test
